@@ -9,12 +9,12 @@
 <meta name="theme-color" content="#FAF6FD" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#191426" media="(prefers-color-scheme: dark)">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://alice51849.github.io/qrcodehalo-support/terms.html">
+<link rel="canonical" href="https://open.cait518.cc/qrcodehalo-support/terms.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="QR Code Halo">
 <meta property="og:title" content="QR Code Halo Terms of Use">
 <meta property="og:description" content="Plain terms for using QR Code Halo, the safe QR scanner and creator.">
-<meta property="og:url" content="https://alice51849.github.io/qrcodehalo-support/terms.html">
+<meta property="og:url" content="https://open.cait518.cc/qrcodehalo-support/terms.html">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 :root{
@@ -187,7 +187,7 @@ footer p{margin:0 0 6px}
  function paras(items){return items.map(function(t){return '<p>'+esc(t)+'</p>'}).join("")}
  function qa(items){return items.map(function(p){
    return '<div class="qa"><h3>'+esc(p[0])+'</h3><p>'+esc(p[1])+'</p></div>'}).join("")}
- function mail(d){return card(d.secContact,'<p>'+esc(d.contact)+'</p><p><a class="mail" href="mailto:hourstag.app@gmail.com">hourstag.app@gmail.com</a></p><p>'+esc(d.contactHint)+'</p>')}
+ function mail(d){return card(d.secContact,'<p>'+esc(d.contact)+'</p><p><!--email_off--><a class="mail" href="mailto:hourstag.app@gmail.com">hourstag.app@gmail.com</a><!--/email_off--></p><p>'+esc(d.contactHint)+'</p>')}
  var BUILD={
   "index":function(d){return card(d.secFeatures,tiles(d.tiles))
     +card(d.secFormats,'<p>'+esc(d.formatsLead)+'</p>'+list(d.fea))
