@@ -17,6 +17,10 @@ EXPECTED_LOCALES = {
 PAYLOAD_RE = re.compile(r"<script>window\.QH_I18N=(\{.*?\});</script>", re.S)
 EMAIL_RE = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
 DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
+CROSS_PROMO_RE = re.compile(
+    r"<!-- ls-family:start -->.*?<!-- ls-family:end -->",
+    re.S,
+)
 LOCALE_KEYS = {
     "langName", "langLabel", "navHome", "navSupport", "navPrivacy", "navTerms", "foot",
     "updated", "secContact", "contact", "contactHint", "secStart", "start", "secTrouble",
@@ -97,7 +101,7 @@ for name in HTML_FILES[1:]:
 for locale, data in reference.items():
     require(set(data) == LOCALE_KEYS, f"{locale} has an unexpected payload schema")
     require(data["proFeatureCount"] == 7, f"{locale} does not declare seven Pro unlocks")
-    require(len(data["securityTiles"]) == 2, f"{locale} needs two security workflows")
+    require(len(data["securityTiles"]) == 3, f"{locale} needs three QR workflows")
     require(len(data["freeItems"]) == 5, f"{locale} free contract is incomplete")
     require(len(data["boundaries"]) == 3, f"{locale} capability boundaries are incomplete")
     require(len(data["start"]) == 3, f"{locale} getting-started content is incomplete")
@@ -116,6 +120,11 @@ for locale, data in reference.items():
     require(
         " · Batch Risk & Difference Audit|" in data["securityTiles"][1],
         f"{locale} does not expose Batch Risk & Difference Audit",
+    )
+    require(
+        data["securityTiles"][2].startswith("QR Verification|")
+        and "SHA-256" in data["securityTiles"][2],
+        f"{locale} does not expose QR Verification",
     )
 
 english = reference["en-US"]
@@ -146,6 +155,16 @@ require_tokens(
     ("exact duplicates", "matching hosts", "lookalike-host", "bounded", "every item", "risk", "device"),
     "English batch audit",
 )
+verification = english["securityTiles"][2]
+require_tokens(
+    verification,
+    (
+        "local reference", "SHA-256 fingerprint", "QR format",
+        "content type", "URL components", "security level",
+        "action disposition",
+    ),
+    "English QR verification",
+)
 free_contract = " ".join(english["freeItems"])
 require_tokens(
     free_contract,
@@ -175,10 +194,24 @@ require_tokens(
 )
 
 for name, text in documents.items():
+    cross_promos = CROSS_PROMO_RE.findall(text)
+    require(len(cross_promos) == 1, f"{name} needs one bounded cross-promo block")
+    require(
+        "More apps from the same developer" in cross_promos[0]
+        and "apps.apple.com" in cross_promos[0],
+        f"{name} cross-promo block is incomplete",
+    )
+    audited_text = CROSS_PROMO_RE.sub("", text)
     for snippet in FORBIDDEN_SNIPPETS:
-        require(snippet.casefold() not in text.casefold(), f"{name} contains forbidden claim: {snippet}")
-    require(set(EMAIL_RE.findall(text)) == {"hourstag.app@gmail.com"}, f"{name} has an unexpected email")
-    require(set(DATE_RE.findall(text)) == {"2026-09-10"}, f"{name} has an unexpected update date")
+        require(
+            snippet.casefold() not in audited_text.casefold(),
+            f"{name} contains forbidden claim: {snippet}",
+        )
+    require(
+        set(EMAIL_RE.findall(audited_text)) == {"hourstag.app@gmail.com"},
+        f"{name} has an unexpected email",
+    )
+    require(set(DATE_RE.findall(text)) == {"2026-09-15"}, f"{name} has an unexpected update date")
     expected_page = name.removesuffix(".html")
     require(f'<body data-page="{expected_page}">' in text, f"{name} has the wrong page identity")
 
@@ -189,8 +222,8 @@ require(f'<meta property="og:description" content="{lead}">' in index, "static O
 require(f'<p class="lead" id="lead">{lead}</p>' in index, "static home lead is stale")
 
 sitemap = (ROOT / "sitemap.xml").read_text()
-require(sitemap.count("<lastmod>2026-09-10</lastmod>") == 4, "sitemap lastmod is stale")
-require("2026-09-03" not in sitemap, "sitemap contains the previous lastmod")
+require(sitemap.count("<lastmod>2026-09-15</lastmod>") == 4, "sitemap lastmod is stale")
+require("2026-09-10" not in sitemap, "sitemap contains the previous lastmod")
 
 digest = hashlib.sha256(payload_texts["index.html"].encode()).hexdigest()[:12]
 print(f"PASS: 4 pages · exact 50 locales · identical payload {digest} · contract/date/email checks")
