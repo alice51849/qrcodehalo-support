@@ -47,6 +47,12 @@ FORBIDDEN_SNIPPETS = {
     "unlimited scanning of every supported format",
     "Wi-Fi will not join from a code",
     "When you choose to open a link, join a Wi-Fi network or add a contact",
+    # 1.0.1 (2026-09-30) runs a scan's action at once; the old promises must not return
+    "nothing opens by itself",
+    "See it before you open it",
+    "safe actionURL",
+    "explicitly confirm it",
+    "does not claim to join Wi",
 }
 
 
@@ -128,6 +134,12 @@ for locale, data in reference.items():
     )
 
 english = reference["en-US"]
+require_tokens(
+    " ".join(english["start"][:2]),
+    ("camera", "photo", "browser", "Wi-Fi", "join prompt", "Run action after scanning", "Settings",
+     "History", "Security Check"),
+    "English 1.0.1 getting started",
+)
 for locale, data in reference.items():
     if locale.startswith("en-"):
         continue
@@ -186,8 +198,7 @@ require_tokens(
 boundaries = " ".join(english["boundaries"])
 require_tokens(
     boundaries,
-    ("read, copied and shared", "safe actionURL", "explicitly confirm",
-     "does not claim to join Wi-Fi or add contacts or events directly",
+    ("add screen", "confirm", "copied", "javascript:", "never opened",
      "Share Extension", "URL or plain text", "PDF export contains QR artwork only",
      "not a document scanner", "OCR tool", "PDF library"),
     "English capability boundaries",
@@ -211,7 +222,7 @@ for name, text in documents.items():
         set(EMAIL_RE.findall(audited_text)) == {"hourstag.app@gmail.com"},
         f"{name} has an unexpected email",
     )
-    require(set(DATE_RE.findall(text)) == {"2026-09-15"}, f"{name} has an unexpected update date")
+    require(set(DATE_RE.findall(text)) == {"2026-09-30"}, f"{name} has an unexpected update date")
     expected_page = name.removesuffix(".html")
     require(f'<body data-page="{expected_page}">' in text, f"{name} has the wrong page identity")
 
@@ -222,8 +233,8 @@ require(f'<meta property="og:description" content="{lead}">' in index, "static O
 require(f'<p class="lead" id="lead">{lead}</p>' in index, "static home lead is stale")
 
 sitemap = (ROOT / "sitemap.xml").read_text()
-require(sitemap.count("<lastmod>2026-09-15</lastmod>") == 4, "sitemap lastmod is stale")
-require("2026-09-10" not in sitemap, "sitemap contains the previous lastmod")
+require(sitemap.count("<lastmod>2026-09-30</lastmod>") == 4, "sitemap lastmod is stale")
+require("2026-09-15" not in sitemap, "sitemap contains the previous lastmod")
 
 digest = hashlib.sha256(payload_texts["index.html"].encode()).hexdigest()[:12]
 print(f"PASS: 4 pages · exact 50 locales · identical payload {digest} · contract/date/email checks")
