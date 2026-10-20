@@ -1,0 +1,17 @@
+# QR Code Halo: Scan & Create support
+
+> Official support, help and privacy pages for QR Code Halo: Scan & Create, an iOS app by Lumi Studio.
+
+- App Store: https://apps.apple.com/app/id6806779853
+- Platform: iOS
+- App Store category: Utilities
+- Developer: Lumi Studio
+
+## Pages
+
+- [Home](https://open.cait518.cc/qrcodehalo-support/)
+- [Support and contact](https://open.cait518.cc/qrcodehalo-support/support.html)
+- [Privacy policy](https://open.cait518.cc/qrcodehalo-support/privacy.html)
+- [Terms of use](https://open.cait518.cc/qrcodehalo-support/terms.html)
+
+<!-- ls-llms: managed by support_network/gen_support_crosspromo.py -->
