@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Code 連結怎麼檢查？掃描前先看網址，避開假 QR Code</title>
+<meta name="description" content="停車繳費、傳單、簡訊裡的假 QR Code 會把人帶到仿冒網站。教你讀取 QR Code 後先看完整網址、判斷可疑連結的重點，以及在 iPhone 上設定成先檢查再開啟。">
+<link rel="canonical" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.zh-Hant.html">
+<link rel="alternate" hreflang="en-US" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.zh-Hant.html">
+<link rel="alternate" hreflang="ja" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.ja.html">
+<link rel="alternate" hreflang="x-default" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.html">
+<meta property="og:title" content="QR Code 連結怎麼檢查？掃描前先看網址，避開假 QR Code">
+<meta property="og:description" content="停車繳費、傳單、簡訊裡的假 QR Code 會把人帶到仿冒網站。教你讀取 QR Code 後先看完整網址、判斷可疑連結的重點，以及在 iPhone 上設定成先檢查再開啟。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.zh-Hant.html">
+<meta name="apple-itunes-app" content="app-id=6806779853">
+<style>
+:root{color-scheme:light dark;--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f6368;--line:rgba(128,128,128,.22);--accent:#2f6fde;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececf0;--muted:#a3a3ab;--card:#1d1d21;--accent:#7aa7ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","PingFang TC","Noto Sans CJK TC","Apple SD Gothic Neo",Roboto,sans-serif}
+a{color:var(--accent)}
+.helpdoc{max-width:820px;margin:0 auto;padding:28px 16px 64px}
+.helpdoc h1{font-size:clamp(26px,4.4vw,36px);line-height:1.3;margin:.2em 0 .4em}
+.helpdoc h2{font-size:clamp(19px,2.8vw,24px);margin:2.1em 0 .6em;scroll-margin-top:16px}
+.helpdoc h3{font-size:17px;margin:1.5em 0 .35em}
+.helpdoc .lede{font-size:17.5px;color:var(--muted);margin:0 0 1.4em}
+.helpdoc .hd-nav{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 20px}
+.helpdoc .hd-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.helpdoc .hd-toc a{display:inline-block;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;text-decoration:none}
+.helpdoc .tbl{overflow-x:auto;margin:.8em 0}
+.helpdoc table{width:100%;border-collapse:collapse;font-size:15px}
+.helpdoc th,.helpdoc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.helpdoc th{font-weight:650;white-space:nowrap}
+.helpdoc .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:1em 0}
+.helpdoc .cta{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:2.4em 0 1em}
+.helpdoc .cta a.btn{display:inline-block;margin:6px 0;padding:11px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:650;text-decoration:none}
+.helpdoc .hd-q{margin:1.4em 0 .3em;font-weight:650;font-size:16.5px}
+.helpdoc .hd-a{margin:0 0 .2em}
+.helpdoc .hd-note{font-size:13px;color:var(--muted);margin-top:2.6em;border-top:1px solid var(--line);padding-top:14px}
+.helpdoc ul,.helpdoc ol{padding-left:1.25em}
+.helpdoc li{margin:.3em 0}
+@media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "QR Code 連結怎麼檢查？掃描前先看網址，避開假 QR Code", "description": "停車繳費、傳單、簡訊裡的假 QR Code 會把人帶到仿冒網站。教你讀取 QR Code 後先看完整網址、判斷可疑連結的重點，以及在 iPhone 上設定成先檢查再開啟。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.zh-Hant.html", "dateModified": "2026-10-20", "author": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "publisher": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "about": {"@type": "SoftwareApplication", "name": "QR Code Halo：安全掃描與建立", "operatingSystem": "iOS", "applicationCategory": "UtilitiesApplication", "url": "https://apps.apple.com/app/id6806779853"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "怎麼在不開啟的情況下看 QR Code 連到哪裡？", "acceptedAnswer": {"@type": "Answer", "text": "在 QR Code Halo 設定裡關閉「掃描後自動執行」，掃描後只會存下不執行，再到歷史紀錄看完整內容並做安全檢查。"}}, {"@type": "Question", "name": "安全檢查會把我的掃描內容傳到伺服器嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。它在你的裝置上用固定規則解析內容，不上網查詢網站信譽。"}}, {"@type": "Question", "name": "javascript: 或 data: 開頭的條碼會被打開嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。javascript:、data:、file: 這類內容一律不開啟。"}}, {"@type": "Question", "name": "可以讀取截圖裡的 QR Code 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。選擇照片就能辨識，同一張圖有好幾個條碼也能一起讀。"}}, {"@type": "Question", "name": "可以做給客人掃的 Wi-Fi QR Code 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。Wi-Fi 是不用購買就能用的 9 種 QR Code 之一。"}}, {"@type": "Question", "name": "需要訂閱嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。可選購的升級是一次買斷。"}}]}</script>
+</head>
+<body>
+<p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">本站由這些 App 的開發者 Lumi Studio 營運，介紹的是我們自己的 App。</p>
+<main class="helpdoc">
+<nav class="hd-nav"><a href="./">支援首頁</a><a href="index.html">說明與常見問題</a><a href="https://apps.apple.com/tw/app/id6806779853?pt=118326163&amp;ct=bm_qrcodehalo_tw_seo&amp;mt=8">QR Code Halo：安全掃描與建立</a><a href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dbm_qrcodehalo_tw_seo%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="nav">Google Play</a></nav>
+<h1>QR Code 連結檢查：掃描後先看清楚再開</h1>
+<p class="lede">QR Code 其實就是一串眼睛看不懂的文字。<strong>動作之前，先把完整內容讀出來：開頭的類型、真正的網域，以及它要你做什麼。</strong>本頁整理 30 秒檢查清單、假 QR Code 的常見特徵，以及怎麼把 QR Code Halo 設定成先顯示內容、不直接開啟。</p>
+<p><strong>本頁目錄</strong></p>
+<ul class="hd-toc"><li><a href="#checklist">任何 QR Code 都適用的 30 秒檢查</a></li><li><a href="#setup">把 QR Code Halo 設定成先檢查</a></li><li><a href="#inspector">安全檢查會顯示什麼</a></li><li><a href="#reader">同時也是完整的 QR Code 讀取與產生器</a></li><li><a href="#faq">常見問題</a></li></ul>
+<h2 id="checklist">任何 QR Code 都適用的 30 秒檢查</h2>
+<ol><li><strong>先看實體條碼。</strong>停車繳費機、充電站、海報上的條碼，是不是另外貼上去的貼紙？貼紙很容易把真的條碼換成假的。</li><li><strong>看網域，不要只看頁面。</strong>網址裡第一個單斜線前面那段才是你要去的網站；拼字很像但不一樣、或跟店家無關的網域，就先停下來。</li><li><strong>看開頭。</strong>一般網址是 https 開頭；javascript:、data:、file: 開頭的都不是普通連結。</li><li><strong>想想它要你做什麼。</strong>餐廳菜單不需要你登入網銀；繳停車費應該在政府或業者自己的 App 或網站。</li><li><strong>不確定就自己輸入網址</strong>，不要跟著條碼走。</li></ol>
+<h2 id="setup">把 QR Code Halo 設定成先檢查</h2>
+<p>QR Code Halo 預設是掃到就直接執行：網址用瀏覽器開啟、Wi-Fi 碼跳出 iOS 加入網路提示，電話、簡訊、Email 與地點交給各自的 App；聯絡人和行程會開啟 iOS 的新增畫面，由你確認後才加入；javascript:、data:、file: 這類內容一律不開啟。</p><p>想每一個都先檢查再決定：</p><ol><li>在 QR Code Halo 的設定裡關閉<strong>「掃描後自動執行」</strong>。</li><li>用相機掃描，或選一張含有條碼的照片。</li><li>到歷史紀錄點開那一筆，按<strong>「安全檢查」</strong>。</li></ol>
+<h2 id="inspector">安全檢查會顯示什麼</h2>
+<div class="tbl"><table><tr><th>工具</th><th>做什麼</th></tr><tr><td>Local Payload Security Inspector</td><td>在裝置端解析完整內容，逐項顯示 scheme、host、path、query 與 fragment，並給出 Safe、Caution 或 Blocked 與判定依據</td></tr><tr><td>QR Verification</td><td>把結果存成本機參照，之後再掃同一個條碼時，依完整 SHA-256 指紋、格式、內容類型、網址組成與安全層級比對</td></tr><tr><td>Batch Risk &amp; Difference Audit</td><td>把整批結果依完全相同內容與 host 分組，在明確界線內比較容易混淆的相似 host</td></tr></table></div><p>判定規則固定且可重現，不查詢網路信譽，也不產生含糊分數；解析不確定時會阻擋外部操作。QR Verification 適合常掃的條碼，例如店家的付款碼：之後掃到的指紋跟存下來的不同，就代表條碼被換過。</p>
+<h2 id="reader">同時也是完整的 QR Code 讀取與產生器</h2>
+<ul><li>讀取 20 種條碼格式，包含 QR、Micro QR、Aztec、Data Matrix、PDF417、EAN-13、UPC-A、Code 128。</li><li>可辨識照片裡的條碼，同一畫面可同時讀多個，支援變焦與手電筒。</li><li>產生文字、連結、Wi-Fi、聯絡人、電子郵件、電話、簡訊、位置與行事曆行程 QR Code。</li><li>歷史紀錄不限筆數，有我的最愛、搜尋、篩選與 CSV 匯出；隱私模式會自動清除。</li></ul><p>每台裝置可成功掃描 3 次，失敗或取消不算；9 種 QR Code 產生、不限筆數的歷史紀錄與完整稽核閱讀都不用購買。可選購的一次買斷（沒有訂閱）增加無限次掃描、批次、備份還原與高解析度匯出等功能。QR Code Halo 不是文件掃描器，不做 OCR。</p>
+<div class="cta">
+<p><strong>想直接在 iPhone 上做？</strong> 關閉自動執行、掃描後先看完整網址再決定要不要開。</p>
+<p><a class="btn" href="https://apps.apple.com/tw/app/id6806779853?pt=118326163&amp;ct=bm_qrcodehalo_tw_seo&amp;mt=8">在 App Store 查看 QR Code Halo：安全掃描與建立</a></p>
+<p><strong>使用 Android？</strong></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dbm_qrcodehalo_tw_seo%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="cta">在 Google Play 查看 QR Code Halo：安全掃描與建立</a></p>
+<p>已經在用 QR Code Halo：安全掃描與建立？可以到 App Store 留下評分或評論。 <a href="https://apps.apple.com/app/id6806779853?action=write-review">撰寫評論</a></p>
+</div>
+<h2 id="faq">常見問題</h2>
+<p class="hd-q">怎麼在不開啟的情況下看 QR Code 連到哪裡？</p>
+<p class="hd-a">在 QR Code Halo 設定裡關閉「掃描後自動執行」，掃描後只會存下不執行，再到歷史紀錄看完整內容並做安全檢查。</p>
+<p class="hd-q">安全檢查會把我的掃描內容傳到伺服器嗎？</p>
+<p class="hd-a">不會。它在你的裝置上用固定規則解析內容，不上網查詢網站信譽。</p>
+<p class="hd-q">javascript: 或 data: 開頭的條碼會被打開嗎？</p>
+<p class="hd-a">不會。javascript:、data:、file: 這類內容一律不開啟。</p>
+<p class="hd-q">可以讀取截圖裡的 QR Code 嗎？</p>
+<p class="hd-a">可以。選擇照片就能辨識，同一張圖有好幾個條碼也能一起讀。</p>
+<p class="hd-q">可以做給客人掃的 Wi-Fi QR Code 嗎？</p>
+<p class="hd-a">可以。Wi-Fi 是不用購買就能用的 9 種 QR Code 之一。</p>
+<p class="hd-q">需要訂閱嗎？</p>
+<p class="hd-a">不需要。可選購的升級是一次買斷。</p>
+
+<div class="box">QR Code Halo 是獨立開發的 App，與 Apple 無關。安全檢查是在你的裝置上用固定規則解析條碼內容，不會上網查詢網站信譽；輸入密碼或付款資料前，請仍自行確認。</div>
+
+<p class="hd-note">本頁由 QR Code Halo：安全掃描與建立 開發者在 AI 協助下撰寫，並對照 App Store 商店頁內容核對。最後更新：2026-10-20。</p>
+</main>
+</body>
+</html>
