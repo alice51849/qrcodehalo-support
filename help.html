@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Code Halo — Help, FAQ &amp; Troubleshooting</title>
+<meta name="description" content="Answers to the questions people ask most about QR Code Halo, plus troubleshooting steps and how to reach a human.">
+<link rel="canonical" href="https://open.cait518.cc/qrcodehalo-support/help.html">
+<meta property="og:title" content="QR Code Halo — Help, FAQ &amp; Troubleshooting">
+<meta property="og:description" content="Answers to the questions people ask most about QR Code Halo, plus troubleshooting steps and how to reach a human.">
+<meta property="og:url" content="https://open.cait518.cc/qrcodehalo-support/help.html">
+<meta property="og:type" content="article">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+ --brand:#8980F7;--brand-strong:#6A5FE0;--rose:#FC67AA;--violet:#CE5FE8;--sky:#5A9EFA;
+ --ink:#2A2140;--ink-soft:#6A6188;--ink-faint:#948CAC;
+ --page:#FAF6FD;--glass:rgba(255,255,255,.78);--glass-hi:rgba(255,255,255,.90);
+ --line:rgba(255,255,255,.88);--edge:rgba(137,128,247,.14);--edge-strong:rgba(137,128,247,.26);
+ --shadow:0 18px 44px -24px rgba(94,68,150,.42);--shadow-lg:0 34px 80px -34px rgba(94,68,150,.46);
+ --radius:22px;--maxw:920px;
+}
+@media (prefers-color-scheme:dark){
+ :root{
+  --brand:#A9A2FF;--brand-strong:#C4BEFF;--rose:#FF8FC2;--violet:#DE8BF2;--sky:#8ABDFB;
+  --ink:#F1EEFF;--ink-soft:#C4BDDD;--ink-faint:#9790B2;
+  --page:#191426;--glass:rgba(40,32,60,.72);--glass-hi:rgba(50,42,74,.80);
+  --line:rgba(255,255,255,.10);--edge:rgba(169,162,255,.18);--edge-strong:rgba(169,162,255,.30);
+  --shadow:0 18px 44px -24px rgba(0,0,0,.70);--shadow-lg:0 34px 80px -32px rgba(0,0,0,.78);
+ }
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);overflow-x:hidden;
+ font:400 17px/1.66 ui-rounded,-apple-system,BlinkMacSystemFont,"SF Pro Rounded","Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;}
+body::before{content:"";position:fixed;inset:-16vh -12vw auto -12vw;height:126vh;z-index:-2;pointer-events:none;
+ background:
+  radial-gradient(56vw 44vw at 15% 3%,rgba(252,103,170,.26),transparent 62%),
+  radial-gradient(50vw 40vw at 88% 10%,rgba(206,95,232,.22),transparent 60%),
+  radial-gradient(58vw 46vw at 74% 82%,rgba(90,158,250,.22),transparent 63%),
+  radial-gradient(44vw 36vw at 22% 70%,rgba(137,128,247,.20),transparent 62%);
+ filter:blur(3px)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+ background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,.40) 100%)}
+@media (prefers-color-scheme:dark){
+ body::before{background:
+  radial-gradient(56vw 44vw at 15% 3%,rgba(252,103,170,.20),transparent 62%),
+  radial-gradient(50vw 40vw at 88% 10%,rgba(206,95,232,.18),transparent 60%),
+  radial-gradient(58vw 46vw at 74% 82%,rgba(90,158,250,.16),transparent 63%),
+  radial-gradient(44vw 36vw at 22% 70%,rgba(137,128,247,.14),transparent 62%)}
+ body::after{opacity:.30;background:linear-gradient(180deg,rgba(150,130,220,.16) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.22) 100%)}
+}
+a{color:var(--brand-strong);text-underline-offset:3px}
+.bar{position:sticky;top:0;z-index:9;backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);
+ background:var(--glass);border-bottom:1px solid var(--edge)}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;color:var(--ink);font-size:19px}
+.mark{width:34px;height:34px;border-radius:11px;flex:0 0 auto;
+ background:linear-gradient(140deg,#FC67AA,#CE5FE8 40%,#8980F7 70%,#5A9EFA);box-shadow:0 8px 18px -8px rgba(137,128,247,.85);
+ position:relative}
+.mark::after{content:"";position:absolute;inset:8px;
+ background:
+  linear-gradient(#fff,#fff) left 0 top 0/9px 9px no-repeat,
+  linear-gradient(#fff,#fff) right 0 top 0/9px 9px no-repeat,
+  linear-gradient(#fff,#fff) left 0 bottom 0/9px 9px no-repeat,
+  linear-gradient(#fff,#fff) right 2px bottom 2px/5px 5px no-repeat}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-inline-start:auto}
+nav a{display:inline-block;padding:6px 13px;border-radius:12px;text-decoration:none;color:var(--ink-soft);font-size:15px}
+nav a:hover{background:var(--glass-hi);color:var(--ink)}
+nav a[aria-current]{background:var(--glass-hi);color:var(--brand-strong);box-shadow:inset 0 0 0 1px var(--edge)}
+.lang{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-faint)}
+select{font:inherit;font-size:14px;padding:6px 10px;border-radius:12px;color:var(--ink);
+ background:var(--glass-hi);border:1px solid var(--edge);max-width:min(52vw,220px)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:34px 20px 12px}
+.hero{padding:22px 4px 8px}
+.badge{display:inline-block;font-size:13px;letter-spacing:.02em;color:var(--brand-strong);
+ background:var(--glass-hi);border:1px solid var(--edge);padding:5px 13px;border-radius:999px;box-shadow:var(--shadow)}
+h1{font-weight:500;font-size:clamp(30px,6.2vw,46px);line-height:1.16;margin:16px 0 12px;letter-spacing:-.015em}
+h2{font-weight:500;font-size:clamp(21px,3.6vw,26px);margin:0 0 14px;letter-spacing:-.01em}
+h3{font-weight:600;font-size:17px;margin:0 0 6px}
+.lead{font-size:clamp(17px,2.5vw,19px);color:var(--ink-soft);margin:0;max-width:64ch}
+.card{background:var(--glass);border:1px solid var(--edge);border-radius:var(--radius);padding:24px 22px;margin:20px 0;
+ box-shadow:var(--shadow);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.card::before{content:"";display:block;height:1px;margin:-24px -22px 20px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(238px,1fr))}
+.tile{background:var(--glass-hi);border:1px solid var(--edge);border-radius:16px;padding:15px 16px;font-size:15.5px;color:var(--ink-soft)}
+.tile b{display:block;color:var(--ink);font-weight:600;font-size:16px;margin-bottom:3px}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:11px 0;border-top:1px solid var(--edge);color:var(--ink-soft)}
+ul.plain li:first-child{border-top:0}
+.qa{padding:15px 0;border-top:1px solid var(--edge)}
+.qa:first-child{border-top:0}
+.qa p{margin:0;color:var(--ink-soft)}
+.cta{display:inline-block;margin-top:6px;padding:12px 22px;border-radius:18px;text-decoration:none;font-weight:600;
+ color:#fff;background:linear-gradient(140deg,#FC67AA,#CE5FE8 45%,#8980F7);
+ box-shadow:0 14px 30px -14px rgba(206,95,232,.85),inset 0 0 0 1px rgba(255,255,255,.30)}
+.mail{font-weight:600;word-break:break-all}
+p{margin:0 0 12px}
+p:last-child{margin-bottom:0}
+footer{max-width:var(--maxw);margin:0 auto;padding:26px 20px 46px;color:var(--ink-faint);font-size:14px}
+footer p{margin:0 0 6px}
+[dir=rtl] nav{margin-inline-start:auto}
+@media (max-width:560px){.wrap{padding-top:22px}.card{padding:20px 17px}}
+</style>
+<style>
+.helpdoc{max-width:820px;margin:0 auto;padding:28px 20px 64px;line-height:1.75}
+.helpdoc h1{font-size:clamp(26px,4.4vw,38px);line-height:1.25;margin:.2em 0 .35em}
+.helpdoc h2{font-size:clamp(19px,2.8vw,24px);margin:2.2em 0 .6em;scroll-margin-top:20px}
+.helpdoc h3{font-size:16.5px;margin:1.6em 0 .35em}
+.helpdoc .lede{font-size:17.5px;opacity:.85;margin:0 0 1.6em}
+.helpdoc ul{padding-left:1.15em}
+.helpdoc li{margin:.35em 0}
+.helpdoc .hd-nav{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 22px;opacity:.8}
+.helpdoc .hd-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.helpdoc .hd-toc a{display:inline-block;padding:6px 12px;border:1px solid currentColor;border-radius:999px;font-size:13.5px;opacity:.75;text-decoration:none}
+.helpdoc .hd-specs{width:100%;border-collapse:collapse;margin:.6em 0;font-size:15px}
+.helpdoc .hd-specs th{text-align:left;font-weight:600;padding:9px 12px 9px 0;white-space:nowrap;vertical-align:top;opacity:.7}
+.helpdoc .hd-specs td{padding:9px 0;border-bottom:1px solid rgba(128,128,128,.18)}
+.helpdoc .hd-q{margin:1.5em 0 .3em;font-weight:650;font-size:16.5px}
+.helpdoc .hd-a{margin:0 0 .2em}
+.helpdoc .hd-cta{display:inline-block;margin:10px 8px 10px 0;padding:11px 20px;border-radius:999px;border:1px solid currentColor;font-weight:600;text-decoration:none}
+.helpdoc .hd-note{font-size:13px;opacity:.62;margin-top:2.6em;border-top:1px solid rgba(128,128,128,.2);padding-top:14px}
+@media (max-width:520px){.helpdoc .hd-specs th{display:block;padding-bottom:0}.helpdoc .hd-specs td{display:block;padding-top:2px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://open.cait518.cc/qrcodehalo-support/help.html", "name": "QR Code Halo — Help, FAQ & Troubleshooting", "inLanguage": "en-US", "mainEntity": [{"@type": "Question", "name": "Does QR Code Halo work without an internet connection?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The App Store listing for QR Code Halo states that its core processing happens on your device, so it keeps working in airplane mode or with no signal. Downloading the app itself and making a purchase still need a connection, because those go through the App Store."}}, {"@type": "Question", "name": "Is this a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. The listing describes a one-time purchase rather than a recurring subscription. You can always confirm what you are being charged for on the App Store product page before you buy, and review anything active under Settings → your name → Subscriptions."}}, {"@type": "Question", "name": "The app can't see my photos", "acceptedAnswer": {"@type": "Answer", "text": "iOS controls photo access per app. Open Settings → Privacy & Security → Photos, find the app, and choose \"All Photos\" (or \"Limited Access\" and then add the photos you want). If you previously chose \"Limited Access\", the app only ever sees the pictures you explicitly selected."}}, {"@type": "Question", "name": "The camera preview is black", "acceptedAnswer": {"@type": "Answer", "text": "Check Settings → Privacy & Security → Camera and make sure the app is switched on. If it is already on, close any other app that may still be holding the camera (Zoom, FaceTime, another scanner), then force quit and reopen the app."}}, {"@type": "Question", "name": "Where do my exported files go?", "acceptedAnswer": {"@type": "Answer", "text": "Exports go through the iOS share sheet, so the destination is whatever you pick — Files (On My iPhone or iCloud Drive), Mail, Messages, or another app. If you can't find a file afterwards, open the Files app and check Recents."}}, {"@type": "Question", "name": "I paid but the app still shows the locked version", "acceptedAnswer": {"@type": "Answer", "text": "One-time purchases are tied to the Apple Account that bought them. Sign in with that same account (Settings → your name → Media & Purchases), then use the app's restore option if it offers one, or reinstall the app from the App Store's Purchased list. Purchases made with a different Apple Account, including a family member's, will not appear."}}, {"@type": "Question", "name": "I switched to a new iPhone — do I have to pay again?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sign in to the new device with the same Apple Account and re-download the app; the purchase belongs to the account, not the handset."}}, {"@type": "Question", "name": "How do I request a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Refunds for anything bought on the App Store are handled by Apple, not by the developer. Go to reportaproblem.apple.com, sign in, find the purchase and choose \"Request a refund\". We can't issue, speed up or overturn an App Store refund decision, but do tell us what went wrong so we can fix it."}}, {"@type": "Question", "name": "How do I delete the app and everything it stored?", "acceptedAnswer": {"@type": "Answer", "text": "Touch and hold the app icon → Remove App → Delete App. Deleting an iOS app removes its sandbox — the documents and settings it kept on the device go with it, so export anything you want to keep first. What the app stores and where is described in our privacy policy."}}, {"@type": "Question", "name": "How do I make sure I'm on the latest version?", "acceptedAnswer": {"@type": "Answer", "text": "Open the App Store, tap your profile picture, and pull down to refresh the pending-updates list. If the app appears there, tap Update. Turning on Settings → App Store → App Updates keeps it automatic."}}]}</script>
+<!-- ls-clickbeacon:start -->
+<script>(function(){var E='https://office.cait518.cc/api/click';function h(e){try{var t=e.target,l=t&&t.closest&&t.closest('a[href]');if(!l||!navigator.sendBeacon)return;var u=new URL(l.href,location.href),s,k,c,q=u.searchParams;if(u.hostname==='apps.apple.com'){s='apple';k=(u.pathname.match(/\/id(\d+)/)||[])[1]||'';c=q.get('ct')||''}else if(u.hostname==='play.google.com'){s='play';var r=new URLSearchParams(q.get('referrer')||'');k=r.get('utm_campaign')||q.get('id')||'';c=r.get('utm_source')||''}else return;navigator.sendBeacon(E,JSON.stringify({p:location.pathname.slice(0,200),a:k.slice(0,100),ct:c.slice(0,64),s:s}))}catch(_){}}document.addEventListener('click',h,true);document.addEventListener('auxclick',h,true)})();</script>
+<!-- ls-clickbeacon:end -->
+<script type="application/ld+json" data-first-party-disclosure="publisher">{"@context":"https://schema.org","@type":"WebSite","@id":"https://open.cait518.cc/ios-app-guide/#website","url":"https://open.cait518.cc/ios-app-guide","publisher":{"@type":"Organization","@id":"https://open.cait518.cc/ios-app-guide/#organization","name":"Lumi Studio","url":"https://open.cait518.cc/ios-app-guide/about.html","description":"Developer of the featured apps and operator of this site."}}</script>
+</head>
+<body>
+<p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">This site is run by Lumi Studio, the developer of the featured apps. The apps recommended here are our own.</p>
+<main class="helpdoc">
+<p class="hd-nav"><a href="./">Support home</a><a href="privacy.html">Privacy policy</a></p>
+<h1>QR Code Halo — Help &amp; FAQ</h1>
+<p class="lede">Answers to the questions people ask most about QR Code Halo, plus troubleshooting steps and how to reach a human.</p>
+<p class="hd-toc-label"><strong>On this page</strong></p>
+<ul class="hd-toc"><li><a href="#about">What QR Code Halo does</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#contact">Still stuck? Email us</a></li></ul>
+<section id="about"><h2>What QR Code Halo does</h2><p>QR Code Halo acts the moment it reads a code. Scan with the camera or choose a photo, and links open in your browser, passkey sign-in codes and app links go straight to iOS, Wi-Fi codes bring up the iOS Join prompt, and calls, messages, email and places open in their own apps. Contacts and events open the iOS add screen for you to confirm. Text is copied with a short note, and javascript:, data: or file: codes are never opened. To check each code first, turn off “Run action after scanning” in Settings; batch scan only collects.</p><p>Security Check in History</p><p>Every scan outside batch mode is saved on this device unless “Skip saving to history” is on. Open any code in History and tap Security Check to review it with two local tools.</p><p>Local Payload Security Inspector</p><p>Parses the complete payload on device into scheme, host, path, query and fragment. Deterministic rules return Safe, Caution or Blocked, transparent findings and an action disposition. No network reputation lookup and no fuzzy score are used; parsing uncertainty fails closed instead of enabling an action.</p><p>QR Verification</p></section>
+<section id="faq"><h2>Frequently asked questions</h2><p class="hd-q" id="q-does-qr-code-halo-work-without-an-internet-connection">Does QR Code Halo work without an internet connection?</p><p class="hd-a">Yes. The App Store listing for QR Code Halo states that its core processing happens on your device, so it keeps working in airplane mode or with no signal. Downloading the app itself and making a purchase still need a connection, because those go through the App Store.</p><p class="hd-q" id="q-is-this-a-subscription">Is this a subscription?</p><p class="hd-a">No. The listing describes a one-time purchase rather than a recurring subscription. You can always confirm what you are being charged for on the App Store product page before you buy, and review anything active under Settings → your name → Subscriptions.</p><p class="hd-q" id="q-the-app-can-t-see-my-photos">The app can&#x27;t see my photos</p><p class="hd-a">iOS controls photo access per app. Open Settings → Privacy & Security → Photos, find the app, and choose "All Photos" (or "Limited Access" and then add the photos you want). If you previously chose "Limited Access", the app only ever sees the pictures you explicitly selected.</p><p class="hd-q" id="q-the-camera-preview-is-black">The camera preview is black</p><p class="hd-a">Check Settings → Privacy & Security → Camera and make sure the app is switched on. If it is already on, close any other app that may still be holding the camera (Zoom, FaceTime, another scanner), then force quit and reopen the app.</p><p class="hd-q" id="q-where-do-my-exported-files-go">Where do my exported files go?</p><p class="hd-a">Exports go through the iOS share sheet, so the destination is whatever you pick — Files (On My iPhone or iCloud Drive), Mail, Messages, or another app. If you can't find a file afterwards, open the Files app and check Recents.</p><p class="hd-q" id="q-i-paid-but-the-app-still-shows-the-locked-version">I paid but the app still shows the locked version</p><p class="hd-a">One-time purchases are tied to the Apple Account that bought them. Sign in with that same account (Settings → your name → Media & Purchases), then use the app's restore option if it offers one, or reinstall the app from the App Store's Purchased list. Purchases made with a different Apple Account, including a family member's, will not appear.</p><p class="hd-q" id="q-i-switched-to-a-new-iphone-do-i-have-to-pay-again">I switched to a new iPhone — do I have to pay again?</p><p class="hd-a">No. Sign in to the new device with the same Apple Account and re-download the app; the purchase belongs to the account, not the handset.</p><p class="hd-q" id="q-how-do-i-request-a-refund">How do I request a refund?</p><p class="hd-a">Refunds for anything bought on the App Store are handled by Apple, not by the developer. Go to <a href="https://reportaproblem.apple.com" rel="nofollow noopener">reportaproblem.apple.com</a>, sign in, find the purchase and choose "Request a refund". We can't issue, speed up or overturn an App Store refund decision, but do tell us what went wrong so we can fix it.</p><p class="hd-q" id="q-how-do-i-delete-the-app-and-everything-it-stored">How do I delete the app and everything it stored?</p><p class="hd-a">Touch and hold the app icon → Remove App → Delete App. Deleting an iOS app removes its sandbox — the documents and settings it kept on the device go with it, so export anything you want to keep first. What the app stores and where is described in our <a href="https://open.cait518.cc/qrcodehalo-support/privacy.html">privacy policy</a>.</p><p class="hd-q" id="q-how-do-i-make-sure-i-m-on-the-latest-version">How do I make sure I&#x27;m on the latest version?</p><p class="hd-a">Open the App Store, tap your profile picture, and pull down to refresh the pending-updates list. If the app appears there, tap Update. Turning on Settings → App Store → App Updates keeps it automatic.</p></section>
+<section id="troubleshooting"><h2>Troubleshooting</h2><h3>The app won&#x27;t open, or closes straight away</h3><p>Force quit it first: swipe up from the bottom of the screen and pause, then swipe the app&#x27;s card away. Reopen it. If it still closes, restart the device — that clears the majority of one-off launch failures.</p><h3>It feels slow, or freezes on a big job</h3><p>Check free storage in Settings → General → iPhone Storage. iOS gets unpredictable below roughly 1 GB free, and anything that writes files (exports, scans, image processing) is the first thing to suffer. Also close other apps that are working in the background.</p><h3>Something looks broken after an update</h3><p>Update iOS itself (Settings → General → Software Update), then update the app. A mismatch between an old iOS and a new build is a common cause of layout or feature glitches.</p><h3>Last resort: reinstall</h3><p>Export anything you want to keep, delete the app, then reinstall it from the App Store&#x27;s Purchased list. Paid unlocks belong to your Apple Account and survive a reinstall; data stored only on the device does not.</p></section>
+<section id="contact"><h2>Still stuck? Email us</h2><p>Write to <!--email_off--><a href="mailto:hourstag.app@gmail.com">hourstag.app@gmail.com</a><!--/email_off-->. To get a useful answer on the first reply, include: your device model (Settings → General → About), your iOS version, the app version, and what you tapped right before the problem appeared. Screenshots or a screen recording help a lot.</p></section>
+<p class="hd-note">Feature descriptions on this page are taken from the app&#x27;s own App Store listing. Specifications come from the App Store&#x27;s public listing data and can change with each update. · Last updated: 2026-10-21</p>
+</main>
+<footer></footer>
+</body>
+</html>

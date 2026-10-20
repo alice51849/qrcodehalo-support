@@ -15,3 +15,7 @@
 - [Terms of use](https://open.cait518.cc/qrcodehalo-support/terms.html)
 
 <!-- ls-llms: managed by support_network/gen_support_crosspromo.py -->
+
+## Support
+
+- [Help, FAQ and troubleshooting](https://open.cait518.cc/qrcodehalo-support/help.html)
