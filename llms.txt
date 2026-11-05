@@ -1,6 +1,6 @@
-# QR Code Halo: Scan & Create support
+# QR Code Halo: Safe QR Scanner support
 
-> Official support, help and privacy pages for QR Code Halo: Scan & Create, an iOS app by Lumi Studio.
+> Official support, help and privacy pages for QR Code Halo: Safe QR Scanner, an iOS app by Lumi Studio.
 
 - App Store: https://apps.apple.com/app/id6806779853
 - Platform: iOS
