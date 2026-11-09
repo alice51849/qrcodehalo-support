@@ -40,6 +40,9 @@ a{color:var(--accent)}
 @media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "QR Code 連結怎麼先檢查再打開？", "acceptedAnswer": {"@type": "Answer", "text": "在設定關閉「掃描後自動執行」，掃到的網址就不會直接開啟。接著在歷史紀錄點開那一筆、按「安全檢查」，看完結果再決定要不要打開。"}}, {"@type": "Question", "name": "「安全檢查」會檢查哪些地方？", "acceptedAnswer": {"@type": "Answer", "text": "在手機上把網址拆開逐項列出通訊協定、網域、路徑、查詢參數與片段，標出可疑網址、非 HTTPS 與混用不同文字的網域，並標示「安全」「注意」或「已阻擋」，附上看得懂的檢查結果與建議動作。"}}, {"@type": "Question", "name": "遇到危險的 QR Code 會怎樣？", "acceptedAnswer": {"@type": "Answer", "text": "javascript:、data:、file: 這類危險碼一律不開啟；解析有疑慮時也不執行外部操作。"}}, {"@type": "Question", "name": "檢查會把網址傳到網路上查嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。安全檢查在裝置本機解析，判定規則固定、可重現，不查詢網路信譽，也不給含糊的分數。"}}, {"@type": "Question", "name": "同一個 QR Code 被換掉了，看得出來嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以用「QR 碼驗證」把一筆結果存成本機參照，之後再掃到時，依完整 SHA-256 指紋、條碼格式、內容類型、網址組成、安全層級與建議動作逐項比對。"}}, {"@type": "Question", "name": "不想留下掃描紀錄可以嗎？", "acceptedAnswer": {"@type": "Answer", "text": "開啟「不儲存到歷史紀錄」就不會存；也有隱私模式自動清除歷史。"}}]}</script>
+<!-- ls-pwa:start -->
+<link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
+<!-- ls-pwa:end -->
 <!-- ls-sharecard:start -->
 <meta property="og:site_name" content="QR Code Halo: Safe QR Scanner">
 <meta property="og:locale" content="zh_TW">
