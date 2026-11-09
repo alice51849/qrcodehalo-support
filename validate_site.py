@@ -53,6 +53,10 @@ FORBIDDEN_SNIPPETS = {
     "safe actionURL",
     "explicitly confirm it",
     "does not claim to join Wi",
+    # 2026-11-09 App Review Guideline 4.10: camera and photo scanning is free and
+    # unlimited for everyone; the retired three-scan allowance must not return
+    "three successful scans",
+    "seven items",
 }
 
 
@@ -106,7 +110,7 @@ for name in HTML_FILES[1:]:
 
 for locale, data in reference.items():
     require(set(data) == LOCALE_KEYS, f"{locale} has an unexpected payload schema")
-    require(data["proFeatureCount"] == 7, f"{locale} does not declare seven Pro unlocks")
+    require(data["proFeatureCount"] == 6, f"{locale} does not declare six Pro unlocks")
     require(len(data["securityTiles"]) == 3, f"{locale} needs three QR workflows")
     require(len(data["freeItems"]) == 5, f"{locale} free contract is incomplete")
     require(len(data["boundaries"]) == 3, f"{locale} capability boundaries are incomplete")
@@ -180,8 +184,7 @@ require_tokens(
 free_contract = " ".join(english["freeItems"])
 require_tokens(
     free_contract,
-    ("three successful scans", "camera", "Photos", "failed scans", "cancellations",
-     "permission denials", "text", "link", "Wi-Fi", "contact", "email", "phone", "SMS",
+    ("Unlimited scanning", "camera", "Photos", "never counted", "text", "link", "Wi-Fi", "contact", "email", "phone", "SMS",
      "location", "calendar event", "unlimited history", "favorites", "search", "filters",
      "category", "multi-select deletion", "history export as CSV", "batch collection",
      "complete per-item reading"),
@@ -189,7 +192,7 @@ require_tokens(
 )
 require_tokens(
     english["proSummary"],
-    ("seven items", "Unlimited scanning", "saving a scanned batch to history",
+    ("six items", "saving a scanned batch to history",
      "opening a batch result's action", "batch creation and batch CSV",
      "committing a backup or a restore", "high resolution PNG, PDF and SVG export",
      "custom Aurora styles"),
