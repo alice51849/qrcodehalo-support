@@ -21,6 +21,14 @@ CROSS_PROMO_RE = re.compile(
     r"<!-- ls-family:start -->.*?<!-- ls-family:end -->",
     re.S,
 )
+# Allowed outside the cross-promo block (CLAUDE.md: every page carries this app's own direct download link;
+# the shared anonymous click counter script names the store hosts it counts). Other apps' links stay forbidden.
+OWN_APP_LINK_RE = re.compile(r"https://apps\.apple\.com/app/id6806779853(?:[?][^\"'<\s]*)?")
+CLICK_BEACON_RE = re.compile(r"<script>[^<]*navigator\.sendBeacon[^<]*</script>", re.S)
+# Network-managed publisher disclosure (00_GrowthEngine support_network site_disclosure) links the guide's
+# publisher page by design; the page's own copy below it is still audited.
+PUBLISHER_DISCLOSURE_RE = re.compile(
+    r'<script type="application/ld\+json" data-first-party-disclosure="publisher">.*?</script>', re.S)
 LOCALE_KEYS = {
     "langName", "langLabel", "navHome", "navSupport", "navPrivacy", "navTerms", "foot",
     "updated", "secContact", "contact", "contactHint", "secStart", "start", "secTrouble",
@@ -215,7 +223,7 @@ for name, text in documents.items():
         and "apps.apple.com" in cross_promos[0],
         f"{name} cross-promo block is incomplete",
     )
-    audited_text = CROSS_PROMO_RE.sub("", text)
+    audited_text = OWN_APP_LINK_RE.sub("", PUBLISHER_DISCLOSURE_RE.sub("", CLICK_BEACON_RE.sub("", CROSS_PROMO_RE.sub("", text))))
     for snippet in FORBIDDEN_SNIPPETS:
         require(
             snippet.casefold() not in audited_text.casefold(),
@@ -236,7 +244,10 @@ require(f'<meta property="og:description" content="{lead}">' in index, "static O
 require(f'<p class="lead" id="lead">{lead}</p>' in index, "static home lead is stale")
 
 sitemap = (ROOT / "sitemap.xml").read_text()
-require(sitemap.count("<lastmod>2026-09-30</lastmod>") == 4, "sitemap lastmod is stale")
+# The support network rewrites lastmod truthfully when a page changes (reconcile_sitemap_lastmod), so the
+# rule is "no entry older than the 1.0.1 copy", not an exact date that every later page edit would break.
+_lastmods = re.findall(r"<lastmod>([0-9-]+)</lastmod>", sitemap)
+require(len(_lastmods) >= 4 and min(_lastmods) >= "2026-09-30", "sitemap lastmod is stale")
 require("2026-09-15" not in sitemap, "sitemap contains the previous lastmod")
 
 digest = hashlib.sha256(payload_texts["index.html"].encode()).hexdigest()[:12]
