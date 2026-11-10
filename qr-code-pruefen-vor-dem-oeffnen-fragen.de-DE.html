@@ -40,6 +40,9 @@ a{color:var(--accent)}
 @media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "de-DE", "mainEntity": [{"@type": "Question", "name": "Woran erkennt die App einen verdächtigen Link?", "acceptedAnswer": {"@type": "Answer", "text": "QR Code Halo zerlegt den Link auf dem Gerät in seine Teile und markiert verdächtige URLs, Links ohne HTTPS und Domains mit gemischten Alphabeten als sicher, Vorsicht oder blockiert."}}, {"@type": "Question", "name": "Werden gefährliche Codes trotzdem geöffnet?", "acceptedAnswer": {"@type": "Answer", "text": "Codes mit javascript:, data: und file: werden nie geöffnet."}}, {"@type": "Question", "name": "Wird der Link an einen Server geschickt?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Die Prüfung läuft direkt auf dem Gerät mit festen Regeln; es gibt keine Online-Reputationsabfrage."}}, {"@type": "Question", "name": "Kann ich auch Codes aus einem Foto scannen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, mit der Kamera oder aus einem Foto."}}, {"@type": "Question", "name": "Kann ich selbst QR-Codes erstellen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, 9 Arten, etwa für WLAN, Kontakte und Termine."}}]}</script>
+<!-- ls-pwa:start -->
+<link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
+<!-- ls-pwa:end -->
 <!-- ls-sharecard:start -->
 <meta property="og:site_name" content="QR Code Halo: Safe QR Scanner">
 <meta property="og:locale" content="de_DE">
