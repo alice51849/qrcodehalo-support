@@ -23,7 +23,7 @@ CROSS_PROMO_RE = re.compile(
 )
 # Allowed outside the cross-promo block (CLAUDE.md: every page carries this app's own direct download link;
 # the shared anonymous click counter script names the store hosts it counts). Other apps' links stay forbidden.
-OWN_APP_LINK_RE = re.compile(r"https://apps\.apple\.com/app/id6806779853(?:[?][^\"'<\s]*)?")
+OWN_APP_LINK_RE = re.compile(r"https://apps\.apple\.com/app/id6806779853(?![0-9])(?:[?][^\"'<\s]*)?")
 CLICK_BEACON_RE = re.compile(r"<script>[^<]*navigator\.sendBeacon[^<]*</script>", re.S)
 # Network-managed publisher disclosure (00_GrowthEngine support_network site_disclosure) links the guide's
 # publisher page by design; the page's own copy below it is still audited.
