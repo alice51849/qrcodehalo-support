@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ตรวจสอบ QR Code ก่อนเปิดลิงก์: เช็คให้ชัวร์ว่าปลอดภัยไหม (iPhone)</title>
+<meta name="description" content="QR Code ปลอมบนป้ายจอดรถ ใบปลิว หรือสติกเกอร์ทับโค้ดจริงพาไปเว็บหลอก วิธีตรวจสอบ QR Code ก่อนเปิด สัญญาณอันตรายที่ต้องดู และวิธีตั้งค่าแอปสแกนบน iPhone ให้ตรวจก่อนเปิด">
+<link rel="canonical" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.th.html">
+<link rel="alternate" hreflang="en-US" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.zh-Hant.html">
+<link rel="alternate" hreflang="ja" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.ja.html">
+<link rel="alternate" hreflang="th" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.th.html">
+<link rel="alternate" hreflang="x-default" href="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.html">
+<meta property="og:title" content="ตรวจสอบ QR Code ก่อนเปิดลิงก์: เช็คให้ชัวร์ว่าปลอดภัยไหม (iPhone)">
+<meta property="og:description" content="QR Code ปลอมบนป้ายจอดรถ ใบปลิว หรือสติกเกอร์ทับโค้ดจริงพาไปเว็บหลอก วิธีตรวจสอบ QR Code ก่อนเปิด สัญญาณอันตรายที่ต้องดู และวิธีตั้งค่าแอปสแกนบน iPhone ให้ตรวจก่อนเปิด">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.th.html">
+<meta name="apple-itunes-app" content="app-id=6806779853, affiliate-data=pt=118326163&amp;ct=sqd1111a_qrcodehalo_th_trqr&amp;mt=8">
+<style>
+:root{color-scheme:light dark;--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f6368;--line:rgba(128,128,128,.22);--accent:#2f6fde;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececf0;--muted:#a3a3ab;--card:#1d1d21;--accent:#7aa7ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","PingFang TC","Noto Sans CJK TC","Apple SD Gothic Neo",Roboto,sans-serif}
+a{color:var(--accent)}
+.helpdoc{max-width:820px;margin:0 auto;padding:28px 16px 64px}
+.helpdoc h1{font-size:clamp(26px,4.4vw,36px);line-height:1.3;margin:.2em 0 .4em}
+.helpdoc h2{font-size:clamp(19px,2.8vw,24px);margin:2.1em 0 .6em;scroll-margin-top:16px}
+.helpdoc h3{font-size:17px;margin:1.5em 0 .35em}
+.helpdoc .lede{font-size:17.5px;color:var(--muted);margin:0 0 1.4em}
+.helpdoc .hd-nav{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 20px}
+.helpdoc .hd-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.helpdoc .hd-toc a{display:inline-block;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;text-decoration:none}
+.helpdoc .tbl{overflow-x:auto;margin:.8em 0}
+.helpdoc table{width:100%;border-collapse:collapse;font-size:15px}
+.helpdoc th,.helpdoc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.helpdoc th{font-weight:650;white-space:nowrap}
+.helpdoc .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:1em 0}
+.helpdoc .cta{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:2.4em 0 1em}
+.helpdoc .cta a.btn{display:inline-block;margin:6px 0;padding:11px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:650;text-decoration:none}
+.helpdoc .hd-q{margin:1.4em 0 .3em;font-weight:650;font-size:16.5px}
+.helpdoc .hd-a{margin:0 0 .2em}
+.helpdoc .hd-note{font-size:13px;color:var(--muted);margin-top:2.6em;border-top:1px solid var(--line);padding-top:14px}
+.helpdoc ul,.helpdoc ol{padding-left:1.25em}
+.helpdoc li{margin:.3em 0}
+@media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ตรวจสอบ QR Code ก่อนเปิดลิงก์: เช็คให้ชัวร์ว่าปลอดภัยไหม (iPhone)", "description": "QR Code ปลอมบนป้ายจอดรถ ใบปลิว หรือสติกเกอร์ทับโค้ดจริงพาไปเว็บหลอก วิธีตรวจสอบ QR Code ก่อนเปิด สัญญาณอันตรายที่ต้องดู และวิธีตั้งค่าแอปสแกนบน iPhone ให้ตรวจก่อนเปิด", "inLanguage": "th", "url": "https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.th.html", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "Lumi Studio"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "th", "mainEntity": [{"@type": "Question", "name": "จะตรวจสอบ QR Code ว่าพาไปเว็บไหนโดยไม่เปิดลิงก์ได้อย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ใน QR Code Halo ให้ปิด “ทำงานทันทีหลังสแกน” ในการตั้งค่า หลังจากนั้นผลสแกนจะถูกบันทึกโดยยังไม่เปิดอะไร คุณอ่านเนื้อหาเต็มและแตะ “ตรวจสอบความปลอดภัย” ใน “ประวัติ” ได้ก่อน"}}, {"@type": "Question", "name": "การตรวจสอบความปลอดภัยส่งข้อมูลสแกนไปที่เซิร์ฟเวอร์ไหม", "acceptedAnswer": {"@type": "Answer", "text": "ไม่ส่ง แอปแยกวิเคราะห์เนื้อหาบนเครื่องด้วยกฎที่ตายตัว และไม่ได้ค้นหาชื่อเสียงของเว็บไซต์ทางอินเทอร์เน็ต"}}, {"@type": "Question", "name": "แอปจะเปิดโค้ด javascript: หรือ data: ไหม", "acceptedAnswer": {"@type": "Answer", "text": "ไม่เปิด โค้ด javascript:, data: และ file: จะไม่ถูกเปิดเลย"}}, {"@type": "Question", "name": "สแกน QR Code จากภาพหน้าจอได้ไหม", "acceptedAnswer": {"@type": "Answer", "text": "ได้ เลือกรูปภาพแล้วแอปจะรู้จำโค้ดในภาพ แม้มีหลายโค้ดในภาพเดียว"}}, {"@type": "Question", "name": "ต้องสมัครสมาชิกไหม", "acceptedAnswer": {"@type": "Answer", "text": "ไม่ต้อง ดาวน์โหลดฟรี ไม่มีโฆษณาและไม่ต้องมีบัญชี ส่วน Lifetime Pro เป็นการซื้อครั้งเดียว ไม่มีการสมัครสมาชิก"}}]}</script>
+<!-- ls-pwa:start -->
+<link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
+<!-- ls-pwa:end -->
+<!-- ls-sharecard:start -->
+<meta property="og:site_name" content="QR Code Halo: Safe QR Scanner">
+<meta property="og:locale" content="th_TH">
+<meta property="og:image" content="https://open.cait518.cc/qrcodehalo-support/assets/og.png?v=8705e7202a">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="QR Code Halo: Safe QR Scanner — Instant Open, URL Check Later">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="max-image-preview:large">
+<!-- ls-sharecard:end -->
+</head>
+<body>
+<p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">เว็บไซต์นี้ดูแลโดย Lumi Studio ผู้พัฒนาแอปที่แนะนำในหน้านี้ แอปที่แนะนำเป็นของเราเอง</p>
+<main class="helpdoc">
+<nav class="hd-nav"><a href="./">หน้าซัพพอร์ต</a><a href="help.html">ช่วยเหลือ &amp; คำถามที่พบบ่อย</a><a href="https://apps.apple.com/th/app/id6806779853?pt=118326163&amp;ct=sqd1111a_qrcodehalo_th_trqr&amp;mt=8">QR Code Halo สแกน &amp; สร้าง</a><a href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dsqd1111a_qrcodehalo_th_trqr%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="nav">Google Play</a></nav>
+<h1>ตรวจสอบ QR Code ก่อนเปิดลิงก์</h1>
+<p class="lede">QR Code คือข้อความที่ตาเปล่าอ่านไม่ออก <strong>ก่อนจะเปิด ให้อ่านลิงก์ให้ครบก่อน: ขึ้นต้นด้วยอะไร โดเมนจริงคืออะไร และขอให้คุณทำอะไร</strong> หน้านี้มีเช็กลิสต์สั้น ๆ สัญญาณของโค้ดปลอม และวิธีตั้งค่า QR Code Halo สแกน &amp; สร้าง ให้แสดงเนื้อหาก่อน แทนที่จะเปิดทันที</p>
+<p><strong>ในหน้านี้</strong></p>
+<ul class="hd-toc"><li><a href="#checklist">เช็กลิสต์ 30 วินาที</a></li><li><a href="#setup">ตั้งค่าให้ตรวจก่อนเปิด</a></li><li><a href="#inspector">ผลตรวจสอบความปลอดภัยบอกอะไร</a></li><li><a href="#reader">สแกนและสร้าง QR ได้ครบ</a></li><li><a href="#faq">คำถามที่พบบ่อย</a></li></ul>
+<h2 id="checklist">เช็กลิสต์ 30 วินาที ก่อนสแกน QR Code ทุกครั้ง</h2>
+<ol><li><strong>ดูตัวโค้ดจริง</strong> เป็นสติกเกอร์แปะทับโค้ดที่พิมพ์ไว้หรือเปล่า เช่น บนตู้จอดรถ ที่ชาร์จ หรือโปสเตอร์ สติกเกอร์เป็นวิธีง่ายที่สุดในการสลับโค้ดจริงเป็นโค้ดปลอม</li><li><strong>อ่านโดเมน ไม่ใช่หน้าตาเว็บ</strong> ส่วนที่อยู่ก่อนเครื่องหมาย / ตัวแรกคือเว็บที่คุณจะเข้าไป ถ้าสะกดคล้าย ๆ หรือเป็นโดเมนที่ไม่เกี่ยวข้อง ให้หยุดก่อน</li><li><strong>ดูว่าขึ้นต้นด้วยอะไร</strong> ลิงก์เว็บปกติขึ้นต้นด้วย https ส่วนโค้ดที่ขึ้นต้นด้วย javascript:, data: หรือ file: ไม่ใช่ลิงก์ธรรมดา</li><li><strong>ถามว่าโค้ดต้องการอะไร</strong> เมนูร้านอาหารไม่ควรขอรหัสธนาคาร การจ่ายค่าจอดรถควรอยู่ในแอปหรือเว็บทางการ</li><li><strong>ถ้าไม่แน่ใจ ให้พิมพ์ที่อยู่เว็บเอง</strong> แทนการกดตามโค้ด</li></ol>
+<h2 id="setup">ตั้งค่า QR Code Halo สแกน &amp; สร้าง ให้ตรวจสอบก่อนเปิด</h2>
+<p>ค่าเริ่มต้นของ QR Code Halo สแกน &amp; สร้าง จะทำงานทันทีที่อ่านโค้ดได้: ลิงก์เปิดในเบราว์เซอร์ โค้ด Wi-Fi ขึ้นข้อความให้เข้าร่วมเครือข่าย ส่วนโค้ด javascript:, data: และ file: จะไม่ถูกเปิดเลย</p><p>ถ้าอยากตรวจสอบทุกโค้ดก่อนที่จะมีอะไรเกิดขึ้น:</p><ol><li>เปิดการตั้งค่าใน QR Code Halo สแกน &amp; สร้าง แล้วปิด <strong>“ทำงานทันทีหลังสแกน”</strong></li><li>สแกนด้วยกล้อง หรือเลือกรูปภาพที่มีโค้ด</li><li>เปิดโค้ดนั้นใน <strong>“ประวัติ”</strong> แล้วแตะ <strong>“ตรวจสอบความปลอดภัย”</strong></li></ol>
+<h2 id="inspector">ผลตรวจสอบความปลอดภัยบอกอะไร</h2>
+<div class="tbl"><table><tr><th>เครื่องมือ</th><th>ทำอะไร</th></tr><tr><td>Local Payload Security Inspector</td><td>แยกเนื้อหาทั้งหมดบนเครื่องเป็น scheme, host, path, query และ fragment แล้วจัดเป็น ปลอดภัย ระวัง หรือถูกบล็อก พร้อมเหตุผลที่ตรวจพบ</td></tr><tr><td>QR Verification</td><td>บันทึกผลเป็นข้อมูลอ้างอิงในเครื่อง แล้วเทียบการสแกนครั้งถัดไปด้วยลายนิ้วมือ SHA-256 แบบเต็ม รูปแบบ QR ประเภทเนื้อหา และองค์ประกอบ URL</td></tr><tr><td>Batch Risk &amp; Difference Audit</td><td>จัดกลุ่มผลที่ซ้ำกันและ host เดียวกันในการสแกนเป็นชุด แล้วเทียบ host ที่อาจสับสนกันภายในขอบเขตที่กำหนด</td></tr></table></div><p>แอปชี้ URL ที่น่าสงสัย ลิงก์ที่ไม่ใช่ HTTPS และโดเมนที่ปนตัวอักษรหลายระบบ กฎตายตัวและให้ผลเหมือนเดิมทุกครั้ง ไม่มีการค้นหาชื่อเสียงทางอินเทอร์เน็ตและไม่มีคะแนนกำกวม ถ้าตีความไม่ได้อย่างปลอดภัยจะคงสถานะบล็อกไว้ QR Verification เหมาะกับโค้ดที่เจอซ้ำ เช่น QR รับเงินของร้านประจำ: ถ้าสแกนครั้งหลังไม่ตรงกับลายนิ้วมือที่บันทึกไว้ แปลว่าโค้ดถูกเปลี่ยน</p>
+<h2 id="reader">สแกนและสร้าง QR ได้ครบในแอปเดียว</h2>
+<ul><li>อ่านบาร์โค้ดได้ 20 รูปแบบ เช่น QR, Micro QR, Aztec, Data Matrix, PDF417, EAN-13, UPC-A และ Code 128</li><li>รู้จำโค้ดในรูปภาพ หลายโค้ดในเฟรมเดียว พร้อมซูมและไฟฉาย</li><li>สร้าง QR แบบข้อความ ลิงก์ Wi-Fi รายชื่อผู้ติดต่อ อีเมล โทรศัพท์ SMS ตำแหน่งที่ตั้ง และกิจกรรมในปฏิทิน</li><li>ประวัติไม่จำกัดพร้อมรายการโปรด การค้นหา ตัวกรอง และส่งออก CSV โหมดความเป็นส่วนตัวล้างประวัติอัตโนมัติได้</li></ul><p>ดาวน์โหลดฟรี: สแกนฟรีสามครั้ง สร้าง QR ได้ครบเก้าประเภท และประวัติไม่จำกัด ไม่มีโฆษณาและไม่ต้องมีบัญชี Lifetime Pro ซื้อครั้งเดียวเพิ่มการสแกนไม่จำกัดและฟีเจอร์แบบชุด ไม่มีการสมัครสมาชิก แอปนี้ไม่ใช่เครื่องสแกนเอกสารและไม่ทำ OCR</p>
+<div class="cta">
+<p><strong>อยากตรวจสอบ QR Code บน iPhone?</strong> ปิดการทำงานอัตโนมัติ สแกนโค้ด แล้วอ่านลิงก์เต็มก่อนเปิด</p>
+<p><a class="btn" href="https://apps.apple.com/th/app/id6806779853?pt=118326163&amp;ct=sqd1111a_qrcodehalo_th_trqr&amp;mt=8">ดู QR Code Halo สแกน &amp; สร้าง บน App Store</a></p>
+<p><strong>ใช้ Android?</strong></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dsqd1111a_qrcodehalo_th_trqr%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="cta">ดู QR Code Halo สแกน &amp; สร้าง บน Google Play</a></p>
+<p>ใช้ QR Code Halo สแกน &amp; สร้าง อยู่แล้ว? ให้คะแนนหรือรีวิวบน App Store ได้ <a href="https://apps.apple.com/app/id6806779853?action=write-review">เขียนรีวิว</a></p>
+</div>
+<h2 id="faq">คำถามที่พบบ่อย</h2>
+<p class="hd-q">จะตรวจสอบ QR Code ว่าพาไปเว็บไหนโดยไม่เปิดลิงก์ได้อย่างไร</p>
+<p class="hd-a">ใน QR Code Halo ให้ปิด “ทำงานทันทีหลังสแกน” ในการตั้งค่า หลังจากนั้นผลสแกนจะถูกบันทึกโดยยังไม่เปิดอะไร คุณอ่านเนื้อหาเต็มและแตะ “ตรวจสอบความปลอดภัย” ใน “ประวัติ” ได้ก่อน</p>
+<p class="hd-q">การตรวจสอบความปลอดภัยส่งข้อมูลสแกนไปที่เซิร์ฟเวอร์ไหม</p>
+<p class="hd-a">ไม่ส่ง แอปแยกวิเคราะห์เนื้อหาบนเครื่องด้วยกฎที่ตายตัว และไม่ได้ค้นหาชื่อเสียงของเว็บไซต์ทางอินเทอร์เน็ต</p>
+<p class="hd-q">แอปจะเปิดโค้ด javascript: หรือ data: ไหม</p>
+<p class="hd-a">ไม่เปิด โค้ด javascript:, data: และ file: จะไม่ถูกเปิดเลย</p>
+<p class="hd-q">สแกน QR Code จากภาพหน้าจอได้ไหม</p>
+<p class="hd-a">ได้ เลือกรูปภาพแล้วแอปจะรู้จำโค้ดในภาพ แม้มีหลายโค้ดในภาพเดียว</p>
+<p class="hd-q">ต้องสมัครสมาชิกไหม</p>
+<p class="hd-a">ไม่ต้อง ดาวน์โหลดฟรี ไม่มีโฆษณาและไม่ต้องมีบัญชี ส่วน Lifetime Pro เป็นการซื้อครั้งเดียว ไม่มีการสมัครสมาชิก</p>
+
+<div class="box">QR Code Halo สแกน &amp; สร้าง เป็นแอปอิสระ ไม่มีส่วนเกี่ยวข้องกับ Apple การตรวจสอบความปลอดภัยอ่านเนื้อหาของโค้ดบนเครื่องด้วยกฎตายตัว ไม่ได้ค้นหาชื่อเสียงของเว็บไซต์ทางออนไลน์ ก่อนกรอกรหัสผ่านหรือข้อมูลการชำระเงิน โปรดใช้วิจารณญาณของคุณเองเสมอ</div>
+<p>อ่านเพิ่ม: <a href="check-qr-code-link-before-opening.html">English</a> · <a href="check-qr-code-link-before-opening.ja.html">日本語</a> · <a href="check-qr-code-link-before-opening.zh-Hant.html">繁體中文</a></p>
+<p class="hd-note">เขียนโดยผู้พัฒนา QR Code Halo สแกน &amp; สร้าง ด้วยความช่วยเหลือของ AI และตรวจทานกับคำอธิบายใน App Store อัปเดตล่าสุด: 2026-11-11</p>
+</main>
+</body>
+</html>
