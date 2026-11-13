@@ -45,7 +45,7 @@ a{color:var(--accent)}
 @media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "QRコードの安全確認：開く前にリンク先を読み取って確かめる方法", "description": "駐車場の精算機やチラシに貼られた偽のQRコードは、そっくりなサイトへ誘導します。読み取ったリンクを開く前に確かめるポイントと、iPhone で先に確認する設定をまとめました。", "inLanguage": "ja", "mainEntityOfPage": "https://open.cait518.cc/qrcodehalo-support/check-qr-code-link-before-opening.ja.html", "dateModified": "2026-10-20", "author": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "publisher": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "about": {"@type": "SoftwareApplication", "name": "QR Code Halo：QRコードをすぐ開く", "operatingSystem": "iOS", "applicationCategory": "UtilitiesApplication", "url": "https://apps.apple.com/app/id6806779853"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ja", "mainEntity": [{"@type": "Question", "name": "開かずにQRコードのリンク先を確認するには？", "acceptedAnswer": {"@type": "Answer", "text": "QR Code Halo の設定で「スキャン後に自動で実行」をオフにすると、読み取っても実行せずに保存されます。履歴で中身を読み、セキュリティチェックを使ってください。"}}, {"@type": "Question", "name": "セキュリティチェックはスキャン内容をサーバーに送りますか？", "acceptedAnswer": {"@type": "Answer", "text": "送りません。端末内で固定のルールにより解析し、ネット上の評判照会はしません。"}}, {"@type": "Question", "name": "javascript: や data: のコードは開かれますか？", "acceptedAnswer": {"@type": "Answer", "text": "開きません。javascript:、data:、file: のようなコードは決して開きません。"}}, {"@type": "Question", "name": "スクリーンショットのQRコードも読み取れますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。写真を選ぶと中のコードを認識し、1 枚に複数あっても読み取れます。"}}, {"@type": "Question", "name": "来客用の Wi-Fi のQRコードは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "作れます。Wi-Fi は購入なしで使える 9 種類の QR コード作成の一つです。"}}, {"@type": "Question", "name": "サブスクリプションはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "ありません。任意のアップグレードは一回きりの買い切りです。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ja", "mainEntity": [{"@type": "Question", "name": "QRコード詐欺かどうかは、開く前にわかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "「スキャン後に自動で実行」をオフにして読み取り、履歴からセキュリティチェックを使うと、開く前に端末内でリンクを分解して「安全・注意・ブロック」で示します。最終的な判断の前には、ドメインもご自身で確認してください。"}}, {"@type": "Question", "name": "開かずにQRコードのリンク先を確認するには？", "acceptedAnswer": {"@type": "Answer", "text": "QR Code Halo の設定で「スキャン後に自動で実行」をオフにすると、読み取っても実行せずに保存されます。履歴で中身を読み、セキュリティチェックを使ってください。"}}, {"@type": "Question", "name": "セキュリティチェックはスキャン内容をサーバーに送りますか？", "acceptedAnswer": {"@type": "Answer", "text": "送りません。端末内で固定のルールにより解析し、ネット上の評判照会はしません。"}}, {"@type": "Question", "name": "javascript: や data: のコードは開かれますか？", "acceptedAnswer": {"@type": "Answer", "text": "開きません。javascript:、data:、file: のようなコードは決して開きません。"}}, {"@type": "Question", "name": "スクリーンショットのQRコードも読み取れますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。写真を選ぶと中のコードを認識し、1 枚に複数あっても読み取れます。"}}, {"@type": "Question", "name": "来客用の Wi-Fi のQRコードは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "作れます。Wi-Fi は購入なしで使える 9 種類の QR コード作成の一つです。"}}, {"@type": "Question", "name": "サブスクリプションはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "ありません。任意のアップグレードは一回きりの買い切りです。"}}]}</script>
 <!-- ls-pwa:start -->
 <link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
 <!-- ls-pwa:end -->
@@ -68,7 +68,7 @@ a{color:var(--accent)}
 <h1>QRコードの安全確認：開く前にリンク先を確かめる</h1>
 <p class="lede">QRコードは、目では読めない文字列です。<strong>動かす前に、中身をすべて読み出して、種類・本当のドメイン・何をさせようとしているかを確認しましょう。</strong>このページでは 30 秒のチェックリスト、偽のQRコードの特徴、そして QR Code Halo を「すぐ開かずに先に確認する」設定にする方法をまとめました。</p>
 <p><strong>このページの内容</strong></p>
-<ul class="hd-toc"><li><a href="#checklist">どのQRコードにも使える 30 秒チェック</a></li><li><a href="#setup">QR Code Halo を「先に確認」に設定する</a></li><li><a href="#inspector">セキュリティチェックでわかること</a></li><li><a href="#reader">QRコードリーダー・作成アプリとしても</a></li><li><a href="#faq">よくある質問</a></li></ul>
+<ul class="hd-toc"><li><a href="#checklist">どのQRコードにも使える 30 秒チェック</a></li><li><a href="#setup">QR Code Halo を「先に確認」に設定する</a></li><li><a href="#inspector">セキュリティチェックでわかること</a></li><li><a href="#reader">QRコードリーダー・作成アプリとしても</a></li><li><a href="#scam">QRコード詐欺が心配なとき</a></li><li><a href="#faq">よくある質問</a></li></ul>
 <h2 id="checklist">どのQRコードにも使える 30 秒チェック</h2>
 <ol><li><strong>実物を見る。</strong>駐車場の精算機、充電スタンド、ポスターのコードの上に、シールが貼られていませんか。シールなら本物を偽物に差し替えるのは簡単です。</li><li><strong>ページではなくドメインを見る。</strong>最初の一本のスラッシュの直前までが、行き先のサイトです。つづりが似ているだけの別ドメインや、お店と関係のないドメインなら一度止まりましょう。</li><li><strong>先頭を見る。</strong>普通のリンクは https で始まります。javascript:、data:、file: で始まるものは普通のリンクではありません。</li><li><strong>何を求めているか考える。</strong>メニューを見るのにネットバンキングのログインは不要です。</li><li><strong>迷ったら、アドレスを自分で入力する。</strong>コードには従わないのが安全です。</li></ol>
 <h2 id="setup">QR Code Halo を「先に確認」に設定する</h2>
@@ -84,7 +84,17 @@ a{color:var(--accent)}
 <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dbm_qrcodehalo_jp_seo%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="cta">Google Play で QR Code Halo：QRコードをすぐ開く を見る</a></p>
 <p>QR Code Halo：QRコードをすぐ開く をお使いの方は、App Store で評価やレビューを書くことができます。 <a href="https://apps.apple.com/app/id6806779853?action=write-review">レビューを書く</a></p>
 </div>
+<h2 id="scam">QRコード詐欺（クイッシング）が心配なとき</h2>
+<p>QRコード詐欺は、本物のコードの上に偽物のシールを貼ったり、メールやチラシに偽サイトへのコードを載せたりして、ログイン情報や支払い情報を入力させる手口です。読み取った瞬間に開いてしまうと、つづりの似た偽ドメインに気づく前にページが表示されます。</p>
+<ol><li><strong>読み取っても開かない。</strong>QR Code Halo の設定で「スキャン後に自動で実行」をオフにすると、読み取ったコードは実行されずに履歴に保存されます。</li><li><strong>セキュリティチェックで中身を分解する。</strong>履歴でコードを開いて「セキュリティチェック」をタップすると、端末内で URL を scheme、host、path などに分けて表示し、怪しい URL、HTTPS でないリンク、異なる文字体系が混ざったドメインを見つけて「安全・注意・ブロック」で示します。</li><li><strong>メールやチラシの画像も確かめる。</strong>スクリーンショットや写真の中のコードも読み取れます。カメラと写真からのスキャンは回数無制限なので、気になるコードは何度でも確認できます。</li><li><strong>パスワードや支払い情報は、最後に自分でも確認。</strong>セキュリティチェックはネット上の評判を照会しない、端末内の固定ルールによる判定です。</li></ol>
+<div class="cta">
+<p><strong>開く前に確かめたいなら</strong> 自動実行をオフにして、気になる QR コードを読み取ってみましょう。</p>
+<p><a class="btn" href="https://apps.apple.com/jp/app/id6806779853?pt=118326163&amp;ct=sqd1112a_qrcodehalo_jp_sg&amp;mt=8">App Store で QR Code Halo：QRコードをすぐ開く を見る</a></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dsqd1112a_qrcodehalo_jp_sg%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="cta">Google Play で QR Code Halo：QRコードをすぐ開く を見る</a></p>
+</div>
 <h2 id="faq">よくある質問</h2>
+<p class="hd-q">QRコード詐欺かどうかは、開く前にわかりますか？</p>
+<p class="hd-a">「スキャン後に自動で実行」をオフにして読み取り、履歴からセキュリティチェックを使うと、開く前に端末内でリンクを分解して「安全・注意・ブロック」で示します。最終的な判断の前には、ドメインもご自身で確認してください。</p>
 <p class="hd-q">開かずにQRコードのリンク先を確認するには？</p>
 <p class="hd-a">QR Code Halo の設定で「スキャン後に自動で実行」をオフにすると、読み取っても実行せずに保存されます。履歴で中身を読み、セキュリティチェックを使ってください。</p>
 <p class="hd-q">セキュリティチェックはスキャン内容をサーバーに送りますか？</p>
@@ -100,7 +110,7 @@ a{color:var(--accent)}
 
 <div class="box">QR Code Halo は独立したアプリであり、Apple とは提携していません。セキュリティチェックは端末内で固定のルールにより内容を解析するもので、ネット上の評判は照会しません。パスワードや支払い情報を入力する前には、ご自身でも確認してください。</div>
 
-<p class="hd-note">このページは QR Code Halo：QRコードをすぐ開く の開発者が AI の補助を受けて作成し、App Store の掲載内容と照合しました。最終更新：2026-10-20。</p>
+<p class="hd-note">このページは QR Code Halo：QRコードをすぐ開く の開発者が AI の補助を受けて作成し、App Store の掲載内容と照合しました。最終更新：2026-11-13。</p>
 </main>
 </body>
 </html>
