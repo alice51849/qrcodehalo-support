@@ -39,7 +39,7 @@ a{color:var(--accent)}
 .helpdoc li{margin:.3em 0}
 @media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ko", "mainEntity": [{"@type": "Question", "name": "QR코드가 사기인지 어떻게 확인하나요?", "acceptedAnswer": {"@type": "Answer", "text": "기록에서 코드를 열고 ‘보안 검사’를 누르면 의심스러운 URL, HTTPS가 아닌 링크, 서로 다른 문자를 섞은 도메인을 찾아 안전·주의·차단으로 알려 줍니다."}}, {"@type": "Question", "name": "스캔하자마자 링크가 열리지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘스캔 후 바로 실행’을 끄면 모든 코드를 먼저 확인한 뒤 열 수 있습니다."}}, {"@type": "Question", "name": "위험한 형식의 코드는 어떻게 처리하나요?", "acceptedAnswer": {"@type": "Answer", "text": "javascript:, data:, file: 코드는 절대 열지 않습니다."}}, {"@type": "Question", "name": "Wi-Fi QR코드도 읽을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "Wi-Fi 코드를 스캔하면 네트워크 연결 안내가 뜹니다. Wi-Fi, 연락처, 일정 등 9가지 QR코드를 직접 만들 수도 있습니다."}}, {"@type": "Question", "name": "스캔 기록이 남지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘기록에 저장 안 함’을 켜면 스캔 결과를 기록에 저장하지 않습니다."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ko", "mainEntity": [{"@type": "Question", "name": "스캔 횟수에 제한이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "카메라와 사진 스캔은 횟수 제한이 없습니다. 의심스러운 QR코드는 필요한 만큼 스캔해서 보안 검사로 확인할 수 있습니다."}}, {"@type": "Question", "name": "QR코드가 사기인지 어떻게 확인하나요?", "acceptedAnswer": {"@type": "Answer", "text": "기록에서 코드를 열고 ‘보안 검사’를 누르면 의심스러운 URL, HTTPS가 아닌 링크, 서로 다른 문자를 섞은 도메인을 찾아 안전·주의·차단으로 알려 줍니다."}}, {"@type": "Question", "name": "스캔하자마자 링크가 열리지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘스캔 후 바로 실행’을 끄면 모든 코드를 먼저 확인한 뒤 열 수 있습니다."}}, {"@type": "Question", "name": "위험한 형식의 코드는 어떻게 처리하나요?", "acceptedAnswer": {"@type": "Answer", "text": "javascript:, data:, file: 코드는 절대 열지 않습니다."}}, {"@type": "Question", "name": "Wi-Fi QR코드도 읽을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "Wi-Fi 코드를 스캔하면 네트워크 연결 안내가 뜹니다. Wi-Fi, 연락처, 일정 등 9가지 QR코드를 직접 만들 수도 있습니다."}}, {"@type": "Question", "name": "스캔 기록이 남지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘기록에 저장 안 함’을 켜면 스캔 결과를 기록에 저장하지 않습니다."}}]}</script>
 <!-- ls-pwa:start -->
 <link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
 <!-- ls-pwa:end -->
@@ -61,7 +61,7 @@ a{color:var(--accent)}
 <nav class="hd-nav"><a href="./">지원 홈</a><a href="https://apps.apple.com/kr/app/id6806779853?pt=118326163&amp;ct=sqd1108_qrcodehalo_ko&amp;mt=8">QR Code Halo</a><a href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo" rel="noopener" data-ls-play="nav">Google Play</a></nav>
 <h1>이 QR코드, 열어도 될까?</h1>
 <p class="lede">주차장, 전단지, 식당 테이블의 QR코드가 사기 코드일까 걱정된다면. QR Code Halo의 App Store 소개 내용을 바탕으로 다운로드 전 자주 묻는 질문에 답합니다.</p>
-<ul class="hd-toc"><li><a href="#know">알 수 있는 것</a></li><li><a href="#privacy">개인정보</a></li><li><a href="#faq">자주 묻는 질문</a></li></ul>
+<ul class="hd-toc"><li><a href="#know">알 수 있는 것</a></li><li><a href="#scam">QR 사기가 걱정될 때</a></li><li><a href="#privacy">개인정보</a></li><li><a href="#faq">자주 묻는 질문</a></li></ul>
 <h2 id="know">QR Code Halo으로 할 수 있는 것</h2>
 <ul>
 <li><strong>20가지 형식</strong>：QR코드와 바코드를 20가지 형식으로 읽습니다. 카메라나 사진으로 스캔하고, 한 화면의 여러 코드도 한 번에 인식합니다.</li>
@@ -70,6 +70,14 @@ a{color:var(--accent)}
 <li><strong>먼저 확인 후 열기</strong>：‘스캔 후 바로 실행’을 끄면 모든 코드를 먼저 확인하고 열 수 있습니다.</li>
 <li><strong>QR코드 만들기</strong>：Wi-Fi, 연락처, 일정 등 9가지 QR코드를 만들 수 있습니다.</li>
 </ul>
+<h2 id="scam">QR 사기(큐싱)가 걱정될 때</h2>
+<p>QR 사기는 진짜 코드 위에 가짜 스티커를 붙이거나, 문자·전단지에 가짜 사이트로 가는 코드를 넣어 로그인 정보나 결제 정보를 입력하게 만드는 수법입니다. 스캔하자마자 링크가 열리면 철자가 비슷한 가짜 도메인을 알아차리기 전에 페이지가 뜹니다.</p>
+<ol><li><strong>스캔해도 바로 열지 않기.</strong> 설정에서 ‘스캔 후 바로 실행’을 끄면 스캔한 코드는 실행되지 않고 기록에 저장됩니다.</li><li><strong>보안 검사로 확인하기.</strong> 기록에서 코드를 열고 ‘보안 검사’를 누르면 기기 안에서 링크를 나눠 살펴보고 의심스러운 URL, HTTPS가 아닌 링크, 서로 다른 문자를 섞은 도메인을 찾아 안전·주의·차단으로 알려 줍니다.</li><li><strong>횟수 걱정 없이 확인하기.</strong> 카메라와 사진 스캔은 횟수 제한이 없으니, 의심스러운 코드는 몇 번이든 스캔해서 확인할 수 있습니다.</li></ol>
+<div class="cta">
+<p><strong>열기 전에 확인하고 싶다면</strong> ‘스캔 후 바로 실행’을 끄고 의심스러운 QR코드를 스캔해 보세요.</p>
+<p><a class="btn" href="https://apps.apple.com/kr/app/id6806779853?pt=118326163&amp;ct=sqd1114a_qrcodehalo_kr_qs&amp;mt=8">App Store에서 QR Code Halo 보기</a></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.QRCodeHalo&amp;referrer=utm_source%3Dsqd1114a_qrcodehalo_kr_qs%26utm_campaign%3Dqrcodehalo" rel="noopener" data-ls-play="cta">Google Play에서 QR Code Halo 보기</a></p>
+</div>
 <h2 id="privacy">개인정보</h2>
 <p>보안 검사는 기기 안에서 이루어지며 인터넷 평판이나 모호한 점수를 쓰지 않습니다. ‘기록에 저장 안 함’을 켜면 스캔 기록을 남기지 않을 수 있습니다.</p>
 <div class="cta">
@@ -79,6 +87,8 @@ a{color:var(--accent)}
 <p>QR Code Halo을(를) 사용 중이라면 App Store에서 평가와 리뷰를 남길 수 있습니다. <a href="https://apps.apple.com/app/id6806779853?action=write-review">리뷰 쓰기</a></p>
 </div>
 <h2 id="faq">자주 묻는 질문</h2>
+<p class="hd-q">스캔 횟수에 제한이 있나요?</p>
+<p class="hd-a">카메라와 사진 스캔은 횟수 제한이 없습니다. 의심스러운 QR코드는 필요한 만큼 스캔해서 보안 검사로 확인할 수 있습니다.</p>
 <p class="hd-q">QR코드가 사기인지 어떻게 확인하나요?</p>
 <p class="hd-a">기록에서 코드를 열고 ‘보안 검사’를 누르면 의심스러운 URL, HTTPS가 아닌 링크, 서로 다른 문자를 섞은 도메인을 찾아 안전·주의·차단으로 알려 줍니다.</p>
 <p class="hd-q">스캔하자마자 링크가 열리지 않게 할 수 있나요?</p>
@@ -89,7 +99,7 @@ a{color:var(--accent)}
 <p class="hd-a">Wi-Fi 코드를 스캔하면 네트워크 연결 안내가 뜹니다. Wi-Fi, 연락처, 일정 등 9가지 QR코드를 직접 만들 수도 있습니다.</p>
 <p class="hd-q">스캔 기록이 남지 않게 할 수 있나요?</p>
 <p class="hd-a">‘기록에 저장 안 함’을 켜면 스캔 결과를 기록에 저장하지 않습니다.</p>
-<p class="hd-note">이 페이지는 QR Code Halo 개발자가 AI의 도움을 받아 작성했으며 App Store 소개 내용과 대조했습니다. 최종 업데이트: 2026-11-08.</p>
+<p class="hd-note">이 페이지는 QR Code Halo 개발자가 AI의 도움을 받아 작성했으며 App Store 소개 내용과 대조했습니다. 최종 업데이트: 2026-11-14.</p>
 </main>
 </body>
 </html>
