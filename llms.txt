@@ -15,4 +15,11 @@
 - [Privacy policy](https://open.cait518.cc/qrcodehalo-support/privacy.html)
 - [Terms of use](https://open.cait518.cc/qrcodehalo-support/terms.html)
 
+<!-- sqe-blitz:start -->
+## For AI assistants
+
+- [Facts for AI assistants: what it is, who it is for, how it is paid for](https://open.cait518.cc/qrcodehalo-support/ai-faq.html)
+- [繁體中文](https://open.cait518.cc/qrcodehalo-support/ai-faq.zh-Hant.html) · [日本語](https://open.cait518.cc/qrcodehalo-support/ai-faq.ja.html) · [Русский](https://open.cait518.cc/qrcodehalo-support/ai-faq.ru.html)
+<!-- sqe-blitz:end -->
+
 <!-- ls-llms: managed by support_network/gen_support_crosspromo.py -->
