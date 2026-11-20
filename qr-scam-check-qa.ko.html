@@ -40,6 +40,9 @@ a{color:var(--accent)}
 @media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ko", "mainEntity": [{"@type": "Question", "name": "스캔 횟수에 제한이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "카메라와 사진 스캔은 횟수 제한이 없습니다. 의심스러운 QR코드는 필요한 만큼 스캔해서 보안 검사로 확인할 수 있습니다."}}, {"@type": "Question", "name": "QR코드가 사기인지 어떻게 확인하나요?", "acceptedAnswer": {"@type": "Answer", "text": "기록에서 코드를 열고 ‘보안 검사’를 누르면 의심스러운 URL, HTTPS가 아닌 링크, 서로 다른 문자를 섞은 도메인을 찾아 안전·주의·차단으로 알려 줍니다."}}, {"@type": "Question", "name": "스캔하자마자 링크가 열리지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘스캔 후 바로 실행’을 끄면 모든 코드를 먼저 확인한 뒤 열 수 있습니다."}}, {"@type": "Question", "name": "위험한 형식의 코드는 어떻게 처리하나요?", "acceptedAnswer": {"@type": "Answer", "text": "javascript:, data:, file: 코드는 절대 열지 않습니다."}}, {"@type": "Question", "name": "Wi-Fi QR코드도 읽을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "Wi-Fi 코드를 스캔하면 네트워크 연결 안내가 뜹니다. Wi-Fi, 연락처, 일정 등 9가지 QR코드를 직접 만들 수도 있습니다."}}, {"@type": "Question", "name": "스캔 기록이 남지 않게 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "‘기록에 저장 안 함’을 켜면 스캔 결과를 기록에 저장하지 않습니다."}}]}</script>
+<!-- ls-clickbeacon:start -->
+<script>(function(){var E='https://office.cait518.cc/api/click';function h(e){try{var t=e.target,l=t&&t.closest&&t.closest('a[href]');if(!l||!navigator.sendBeacon)return;var u=new URL(l.href,location.href),s,k,c,q=u.searchParams;if(u.hostname==='apps.apple.com'){s='apple';k=(u.pathname.match(/\/id(\d+)/)||[])[1]||'';c=q.get('ct')||''}else if(u.hostname==='play.google.com'){s='play';var r=new URLSearchParams(q.get('referrer')||'');k=r.get('utm_campaign')||q.get('id')||'';c=r.get('utm_source')||''}else return;navigator.sendBeacon(E,JSON.stringify({p:location.pathname.slice(0,200),a:k.slice(0,100),ct:c.slice(0,64),s:s}))}catch(_){}}document.addEventListener('click',h,true);document.addEventListener('auxclick',h,true)})();</script>
+<!-- ls-clickbeacon:end -->
 <!-- ls-pwa:start -->
 <link rel="manifest" href="/qrcodehalo-support/manifest.webmanifest">
 <!-- ls-pwa:end -->
@@ -54,9 +57,6 @@ a{color:var(--accent)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="max-image-preview:large">
 <!-- ls-sharecard:end -->
-<!-- ls-clickbeacon:start -->
-<script>(function(){var E='https://office.cait518.cc/api/click';function h(e){try{var t=e.target,l=t&&t.closest&&t.closest('a[href]');if(!l||!navigator.sendBeacon)return;var u=new URL(l.href,location.href),s,k,c,q=u.searchParams;if(u.hostname==='apps.apple.com'){s='apple';k=(u.pathname.match(/\/id(\d+)/)||[])[1]||'';c=q.get('ct')||''}else if(u.hostname==='play.google.com'){s='play';var r=new URLSearchParams(q.get('referrer')||'');k=r.get('utm_campaign')||q.get('id')||'';c=r.get('utm_source')||''}else return;navigator.sendBeacon(E,JSON.stringify({p:location.pathname.slice(0,200),a:k.slice(0,100),ct:c.slice(0,64),s:s}))}catch(_){}}document.addEventListener('click',h,true);document.addEventListener('auxclick',h,true)})();</script>
-<!-- ls-clickbeacon:end -->
 </head>
 <body>
 <p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">이 사이트는 소개된 앱의 개발사인 Lumi Studio가 운영하며, 여기서 추천하는 앱은 모두 자사 앱입니다.</p>
